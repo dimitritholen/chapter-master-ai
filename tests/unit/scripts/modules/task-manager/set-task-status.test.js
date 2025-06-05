@@ -36,7 +36,7 @@ jest.unstable_mockModule('../../../../../scripts/modules/ui.js', () => ({
 	getStatusWithColor: jest.fn((status) => status)
 }));
 
-jest.unstable_mockModule('../../../../../src/constants/task-status.js', () => ({
+jest.unstable_mockModule('../../../../../src/constants/story-status.js', () => ({
 	isValidTaskStatus: jest.fn((status) =>
 		[
 			'pending',

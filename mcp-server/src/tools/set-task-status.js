@@ -17,7 +17,7 @@ import {
 	findTasksPath,
 	findComplexityReportPath
 } from '../core/utils/path-utils.js';
-import { TASK_STATUS_OPTIONS } from '../../../src/constants/task-status.js';
+import { TASK_STATUS_OPTIONS } from '../../../src/constants/story-status.js';
 
 /**
  * Register the setTaskStatus tool with the MCP server

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Task Master
+ * Chapter Master
  * Copyright (c) 2025 Eyal Toledano, Ralph Khreish
  *
  * This software is licensed under the MIT License with Commons Clause.
@@ -16,7 +16,7 @@
  */
 
 /**
- * Claude Task Master CLI
+ * Claude Chapter Master CLI
  * Main entry point for globally installed package
  */
 
@@ -97,7 +97,7 @@ function createDevScriptAction(commandName) {
 				console.error(`  Use:        --${flag.kebabCase}`);
 			});
 			console.error(
-				'\nExample: task-master parse-prd --num-tasks=5 instead of --numTasks=5\n'
+				'\nExample: chapter-master parse-premise --num-chapters=5 instead of --numChapters=5\n'
 			);
 			process.exit(1);
 		}
@@ -271,8 +271,8 @@ function createDevScriptAction(commandName) {
 const program = new Command();
 
 program
-	.name('task-master')
-	.description('Claude Task Master CLI')
+	.name('chapter-master')
+	.description('Claude Chapter Master CLI')
 	.version(version)
 	.addHelpText('afterAll', () => {
 		// Use the same help display function as dev.js for consistency
@@ -340,7 +340,7 @@ process.on('uncaughtException', (err) => {
 		console.error(chalk.red(`Error: Unknown option '${option}'`));
 		console.error(
 			chalk.yellow(
-				`Run 'task-master ${command} --help' to see available options for this command`
+				`Run 'chapter-master ${command} --help' to see available options for this command`
 			)
 		);
 		process.exit(1);
@@ -352,7 +352,7 @@ process.on('uncaughtException', (err) => {
 
 		console.error(chalk.red(`Error: Unknown command '${command}'`));
 		console.error(
-			chalk.yellow(`Run 'task-master --help' to see available commands`)
+			chalk.yellow(`Run 'chapter-master --help' to see available commands`)
 		);
 		process.exit(1);
 	}
@@ -365,7 +365,7 @@ process.on('uncaughtException', (err) => {
 	process.exit(1);
 });
 
-// Show help if no command was provided (just 'task-master' with no args)
+// Show help if no command was provided (just 'chapter-master' with no args)
 if (process.argv.length <= 2) {
 	displayBanner();
 	displayHelp();

@@ -7,7 +7,7 @@ import { jest } from '@jest/globals';
 import {
 	isValidTaskStatus,
 	TASK_STATUS_OPTIONS
-} from '../../../../../src/constants/task-status.js';
+} from '../../../../../src/constants/story-status.js';
 
 // Sample tasks data for testing
 const sampleTasks = {
@@ -132,11 +132,11 @@ describe('updateSingleTaskStatus function', () => {
 		const testTasksData = JSON.parse(JSON.stringify(sampleTasks));
 
 		// Act
-		const result = testUpdateSingleTaskStatus(testTasksData, '2', 'done');
+		const result = testUpdateSingleTaskStatus(testTasksData, '2', 'completed');
 
 		// Assert
 		expect(result).toBe(true);
-		expect(testTasksData.tasks[1].status).toBe('done');
+		expect(testTasksData.tasks[1].status).toBe('completed');
 	});
 
 	test('should throw error for invalid status', async () => {
@@ -154,11 +154,11 @@ describe('updateSingleTaskStatus function', () => {
 		const testTasksData = JSON.parse(JSON.stringify(sampleTasks));
 
 		// Act
-		const result = testUpdateSingleTaskStatus(testTasksData, '3.1', 'done');
+		const result = testUpdateSingleTaskStatus(testTasksData, '3.1', 'completed');
 
 		// Assert
 		expect(result).toBe(true);
-		expect(testTasksData.tasks[2].subtasks[0].status).toBe('done');
+		expect(testTasksData.tasks[2].subtasks[0].status).toBe('completed');
 	});
 
 	test('should handle parent tasks without subtasks', async () => {
@@ -172,7 +172,7 @@ describe('updateSingleTaskStatus function', () => {
 
 		// Assert
 		expect(() =>
-			testUpdateSingleTaskStatus(testTasksData, '3.1', 'done')
+			testUpdateSingleTaskStatus(testTasksData, '3.1', 'completed')
 		).toThrow('has no subtasks');
 	});
 
@@ -182,7 +182,7 @@ describe('updateSingleTaskStatus function', () => {
 
 		// Assert
 		expect(() =>
-			testUpdateSingleTaskStatus(testTasksData, '3.99', 'done')
+			testUpdateSingleTaskStatus(testTasksData, '3.99', 'completed')
 		).toThrow('Subtask 99 not found');
 	});
 });

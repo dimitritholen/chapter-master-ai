@@ -23,7 +23,7 @@ import {
 	readComplexityReport
 } from './task-manager.js';
 import { getProjectName, getDefaultSubtasks } from './config-manager.js';
-import { TASK_STATUS_OPTIONS } from '../../src/constants/task-status.js';
+import { TASK_STATUS_OPTIONS } from '../../src/constants/story-status.js';
 import {
 	TASKMASTER_CONFIG_FILE,
 	TASKMASTER_TASKS_FILE

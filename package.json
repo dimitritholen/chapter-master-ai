@@ -1,13 +1,13 @@
 {
-	"name": "task-master-ai",
+	"name": "chapter-master-ai",
 	"version": "0.16.1",
-	"description": "A task management system for ambitious AI-driven development that doesn't overwhelm and confuse Cursor.",
+	"description": "An AI-driven book writing system that transforms story premises into complete novels with professional quality controls.",
 	"main": "index.js",
 	"type": "module",
 	"bin": {
-		"task-master": "bin/task-master.js",
-		"task-master-mcp": "mcp-server/server.js",
-		"task-master-ai": "mcp-server/server.js"
+		"chapter-master": "bin/chapter-master.js",
+		"chapter-master-mcp": "mcp-server/server.js",
+		"chapter-master-ai": "mcp-server/server.js"
 	},
 	"scripts": {
 		"test": "node --experimental-vm-modules node_modules/.bin/jest",
@@ -16,7 +16,7 @@
 		"test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
 		"test:e2e": "./tests/e2e/run_e2e.sh",
 		"test:e2e-report": "./tests/e2e/run_e2e.sh --analyze-log",
-		"prepare": "chmod +x bin/task-master.js mcp-server/server.js",
+		"prepare": "chmod +x bin/chapter-master.js mcp-server/server.js",
 		"changeset": "changeset",
 		"release": "changeset publish",
 		"inspector": "npx @modelcontextprotocol/inspector node mcp-server/server.js",
@@ -26,15 +26,18 @@
 	},
 	"keywords": [
 		"claude",
-		"task",
-		"management",
+		"book",
+		"writing",
+		"story",
+		"novel",
 		"ai",
-		"development",
 		"cursor",
 		"anthropic",
 		"llm",
 		"mcp",
-		"context"
+		"chapter",
+		"character",
+		"plot"
 	],
 	"author": "Eyal Toledano",
 	"license": "MIT WITH Commons-Clause",
@@ -78,17 +81,17 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/eyaltoledano/claude-task-master.git"
+		"url": "git+https://github.com/eyaltoledano/claude-chapter-master.git"
 	},
-	"homepage": "https://github.com/eyaltoledano/claude-task-master#readme",
+	"homepage": "https://github.com/eyaltoledano/claude-chapter-master#readme",
 	"bugs": {
-		"url": "https://github.com/eyaltoledano/claude-task-master/issues"
+		"url": "https://github.com/eyaltoledano/claude-chapter-master/issues"
 	},
 	"files": [
 		"scripts/**",
 		"assets/**",
 		".cursor/**",
-		"README-task-master.md",
+		"README-chapter-master.md",
 		"index.js",
 		"bin/**",
 		"mcp-server/**",

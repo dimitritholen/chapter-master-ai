@@ -85,7 +85,7 @@ import {
 import {
 	isValidTaskStatus,
 	TASK_STATUS_OPTIONS
-} from '../../src/constants/task-status.js';
+} from '../../src/constants/story-status.js';
 import { getTaskMasterVersion } from '../../src/utils/getVersion.js';
 
 /**

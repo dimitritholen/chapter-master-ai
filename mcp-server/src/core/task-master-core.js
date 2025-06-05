@@ -32,6 +32,14 @@ import { initializeProjectDirect } from './direct-functions/initialize-project.j
 import { modelsDirect } from './direct-functions/models.js';
 import { moveTaskDirect } from './direct-functions/move-task.js';
 
+// New story-focused direct functions
+import { parsePremiseDirect } from './direct-functions/parse-premise.js';
+import { nextChapterDirect } from './direct-functions/next-chapter.js';
+import { createCharacterDirect } from './direct-functions/create-character.js';
+import { generateChapterDirect } from './direct-functions/generate-chapter.js';
+import { checkConsistencyDirect } from './direct-functions/check-consistency.js';
+import { getStoryStatusDirect } from './direct-functions/get-story-status.js';
+
 // Re-export utility functions
 export { findTasksPath } from './utils/path-utils.js';
 
@@ -62,7 +70,15 @@ export const directFunctions = new Map([
 	['removeTaskDirect', removeTaskDirect],
 	['initializeProjectDirect', initializeProjectDirect],
 	['modelsDirect', modelsDirect],
-	['moveTaskDirect', moveTaskDirect]
+	['moveTaskDirect', moveTaskDirect],
+
+	// Story-focused functions
+	['parsePremiseDirect', parsePremiseDirect],
+	['nextChapterDirect', nextChapterDirect],
+	['createCharacterDirect', createCharacterDirect],
+	['generateChapterDirect', generateChapterDirect],
+	['checkConsistencyDirect', checkConsistencyDirect],
+	['getStoryStatusDirect', getStoryStatusDirect]
 ]);
 
 // Re-export all direct function implementations
@@ -92,5 +108,12 @@ export {
 	removeTaskDirect,
 	initializeProjectDirect,
 	modelsDirect,
-	moveTaskDirect
+	moveTaskDirect,
+	// Story-focused functions
+	parsePremiseDirect,
+	nextChapterDirect,
+	createCharacterDirect,
+	generateChapterDirect,
+	checkConsistencyDirect,
+	getStoryStatusDirect
 };
